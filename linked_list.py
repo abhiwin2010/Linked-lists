@@ -60,24 +60,29 @@ class Linked_List:
             print("Deleted from the end of the list")
 #inserting an element at a given position
     def insert_at_nth_position(self,data,n):
-        temp = self.head
-        if int(n) <=self.count():
-            count = 1
-            while count < int(n-1):
-                if temp.next != None:
-                    temp = temp.next
-                    count += 1
-            new = Node()
-            new.data = data
-            new.next = temp.next
-            temp.next = new
-            print("Inserted at postion",n)
+        if n == 1:
+            self.insert_at_front(data)
         else:
-            print("entered position exceeds list length")
+            temp = self.head
+            if int(n) <=self.count():
+                count = 1
+                while count < int(n-1):
+                    if temp.next != None:
+                        temp = temp.next
+                        count += 1
+                new = Node()
+                new.data = data
+                new.next = temp.next
+                temp.next = new
+                print("Inserted at postion",n)
+            else:
+                print("entered position exceeds list length")
 #deleting an element from a given position of the list
     def delete_from_nth_position(self,n):
         if self.head == None:
             print("list is already empty")
+        elif n == 1:
+            self.delete_from_front()
         elif int(n) > self.count():
             print("entered position exceeds list length")
         else:
