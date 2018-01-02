@@ -1,4 +1,5 @@
-
+# Singly-linked list implementation in Python3
+# author = Abhijeet Mohapatra
 class Node:
     def __init__(self):
         self.data = None
@@ -99,23 +100,3 @@ class Linked_List:
             temp = temp.next
             count += 1
         return count
-
-l = Linked_List()
-l.insert_at_end(12)
-l.insert_at_end(23)
-l.insert_at_end(45)
-l.insert_at_front(98)
-l.display()
-l.delete_from_end()
-l.display()
-l.delete_from_front()
-l.display()
-l.insert_at_nth_position(123,3)
-l.display()
-l.insert_at_end(234)
-l.insert_at_end(342)
-l.insert_at_nth_position(567,3)
-l.display()
-l.delete_from_nth_position(2)
-l.display()
-print(l.count())
