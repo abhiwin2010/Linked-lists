@@ -59,6 +59,8 @@ class Linked_List:
             temp.next = None
             print("Deleted from the end of the list")
 #inserting an element at a given position
+#note that here the code is such that if position specified is more
+#than the list length,it shows a message and doesn't enter anything
     def insert_at_nth_position(self,data,n):
         if n == 1:
             self.insert_at_front(data)
